@@ -3,7 +3,7 @@
  * Show all-process cpu and memory bars on a slender widget at the right of tab bar
  * Dynamically show processes on popup menu of the widget
  * 
- * Tested on Firefox 128, with xiaoxiaoflood's uc loader
+ * Tested on Firefox 140, with xiaoxiaoflood's uc loader
  * 
  * Author: garywill (https://garywill.github.io)
  *    https://github.com/garywill/firefoxtaskmonitor
@@ -1316,6 +1316,7 @@ function calcPsTotalCpuMem(ps)
                         zIndex: "99999",
                         minWidth: (barWidth*2 + barGap) + "px",
                         marginLeft: -(barWidth*2 + barGap) + "px",
+                        "pointer-events": "none",
                     }
                 );
                 addBarsToNode(allBarsCont, cpu, mem, {cpuColor: allCpuColor, memColor: allMemColor, cpuMax: allCpuMax, memMax: allMemMax} );
@@ -1474,7 +1475,7 @@ async function TaskMonitorUpdate() {
 
         
     }else{
-        console.log("TaskMonitor staling for not first window");
+        //console.log("TaskMonitor staling for not first window");
     }
         
 }
