@@ -290,6 +290,7 @@ function calcPsTotalCpuMem(ps)
                         zIndex: "99999",
                         minWidth: (barWidth*2 + barGap) + "px",
                         marginLeft: -(barWidth*2 + barGap) + "px",
+                        "pointer-events": "none",
                     }
                 );
                 addBarsToNode(allBarsCont, cpu, mem, {cpuColor: allCpuColor, memColor: allMemColor, cpuMax: allCpuMax, memMax: allMemMax} );
