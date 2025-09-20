@@ -9,12 +9,8 @@
  *    https://github.com/garywill/firefoxtaskmonitor
  */
 
-// ==UserScript==
-// @include         main
-// @onlyonce
-// ==/UserScript==
 
-console.log("taskmonitor_part2.js"); 
+console.log("taskmonitor_part2.uc.js");
 
 "use strict";
 
@@ -33,8 +29,8 @@ console.log("taskmonitor_part2.js");
         const fftm_widget_label = "TaskManager Widget";
         const fftm_widget_id = "fftm_widget";
         
-        Components.utils.import("resource:///modules/CustomizableUI.jsm");
-        
+        const { CustomizableUI } = ChromeUtils.importESModule("resource:///modules/CustomizableUI.sys.mjs");
+
 //         if ( ! CustomizableUI.getWidget(fftm_widget_id) ) {
             CustomizableUI.createWidget({
                 id: fftm_widget_id,
@@ -52,7 +48,7 @@ console.log("taskmonitor_part2.js");
                     
                     let mp = doc.createXULElement("menupopup");
                     mp.id = 'fftm_widget_menupopup';
-                    // mp.onclick = function(event) {  event.preventDefault()  ;} ;
+                    mp.onclick = function(event) {  event.preventDefault()  ;} ;
                 
                     
                     for (var i=0; i<menu_show_tasks_num ; i++)

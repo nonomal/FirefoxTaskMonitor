@@ -17,7 +17,7 @@
 // @include         main
 // ==/UserScript==
 
-console.log("taskmonitor_part1.js");
+console.log("taskmonitor_part1.uc.js");
 
 
 "use strict";
@@ -514,9 +514,6 @@ let View = {
                 case "socket":
                     fluentName = "about-processes-socket-process";
                     break;
-                case "remoteSandboxBroker":
-                    fluentName = "about-processes-remote-sandbox-broker-process";
-                    break;
                 case "forkServer":
                     fluentName = "about-processes-fork-server-process";
                     break;
@@ -525,6 +522,9 @@ let View = {
                     break;
                 case "utility":
                     fluentName = "about-processes-utility-process";
+                    break;
+                case "inference":
+                    fluentName = "about-processes-inference-process";
                     break;
                     // The following are probably not going to show up for users
                     // but let's handle the case anyway to avoid heisenoranges
@@ -1188,7 +1188,8 @@ const fluentNameToDataType = {
     "about-processes-remote-sandbox-broker-process": "remoteSandboxBroker", 
     "about-processes-fork-server-process": "forkServer", 
     "about-processes-preallocated-process": "pre", 
-    "about-processes-utility-process": "utility" 
+    "about-processes-utility-process": "utility",
+    "about-processes-inference-process": "inference",
 };  
 function shortenFlname(fluentName) {  
     return fluentNameToDataType[fluentName] || "unknown"; 
@@ -1264,7 +1265,7 @@ function calcPsTotalCpuMem(ps)
         
         var close_button = tabNode.getElementsByClassName("tab-content")[0].getElementsByClassName("tab-close-button")[0];
         close_button.style.zIndex = "999";
-        close_button.style.position = "fixed";
+        // close_button.style.position = "fixed";
         
         /*
         const c_minwidth = barWidth*2 + barGap ;
@@ -1473,7 +1474,7 @@ async function TaskMonitorUpdate() {
 
         
     }else{
-        //console.log("TaskMonitor staling for not first window");
+        console.log("TaskMonitor staling for not first window");
     }
         
 }
