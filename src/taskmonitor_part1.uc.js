@@ -162,7 +162,8 @@ const fluentNameToDataType = {
     "about-processes-remote-sandbox-broker-process": "remoteSandboxBroker", 
     "about-processes-fork-server-process": "forkServer", 
     "about-processes-preallocated-process": "pre", 
-    "about-processes-utility-process": "utility" 
+    "about-processes-utility-process": "utility",
+    "about-processes-inference-process": "inference",
 };  
 function shortenFlname(fluentName) {  
     return fluentNameToDataType[fluentName] || "unknown"; 
