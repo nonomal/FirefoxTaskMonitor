@@ -239,7 +239,7 @@ function calcPsTotalCpuMem(ps)
         
         var close_button = tabNode.getElementsByClassName("tab-content")[0].getElementsByClassName("tab-close-button")[0];
         close_button.style.zIndex = "999";
-        close_button.style.position = "fixed";
+        // close_button.style.position = "fixed";
         
         /*
         const c_minwidth = barWidth*2 + barGap ;
