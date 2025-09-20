@@ -33,7 +33,7 @@ console.log("taskmonitor_part2.js");
         const fftm_widget_label = "TaskManager Widget";
         const fftm_widget_id = "fftm_widget";
         
-        Components.utils.import("resource:///modules/CustomizableUI.jsm");
+        ChromeUtils.importESModule("resource:///modules/CustomizableUI.sys.mjs")
         
 //         if ( ! CustomizableUI.getWidget(fftm_widget_id) ) {
             CustomizableUI.createWidget({
