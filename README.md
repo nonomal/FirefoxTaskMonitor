@@ -4,11 +4,11 @@ Show CPU &amp; memory bars and usage.
 
 ![screenshot](https://s1.ax1x.com/2020/07/18/UcsPLF.jpg)
 
-Firefox userChrome script. Tested on Firefox 128, with xiaoxiaoflood's uc loader.
+Firefox userChrome script. Tested on Firefox 140
 
-## Usage
+## Install
 
-Download `.uc.js` files from `dist/` folder.
+Use files from `dist/` folder.
 
 ## Features
 
@@ -16,7 +16,7 @@ Download `.uc.js` files from `dist/` folder.
 - Show browser CPU and memory bars on right side of tab bar (removable widget)
     - Clicking widget shows processes info dynamically in popup
 - Mouse hover shows more details (CPU, memory, PID, host ...)
-- Optional periodically clean Firefox memory  (experimental)
+- Optional periodically clean Firefox memory
 
 ---------------------
 
