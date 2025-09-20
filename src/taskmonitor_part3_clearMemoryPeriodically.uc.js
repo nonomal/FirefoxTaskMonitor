@@ -13,7 +13,7 @@
 // @include         main
 // ==/UserScript==
 
-console.log("taskmonitor_part3_clearMemoryPeriodically.js");
+console.log("taskmonitor_part3_clearMemoryPeriodically.uc.js");
 
 "use strict";
 

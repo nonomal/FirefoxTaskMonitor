@@ -17,7 +17,7 @@
 // @include         main
 // ==/UserScript==
 
-console.log("taskmonitor_part1.js");
+console.log("taskmonitor_part1.uc.js");
 
 
 "use strict";
