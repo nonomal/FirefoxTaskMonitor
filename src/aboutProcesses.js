@@ -467,9 +467,6 @@ let View = {
                 case "socket":
                     fluentName = "about-processes-socket-process";
                     break;
-                case "remoteSandboxBroker":
-                    fluentName = "about-processes-remote-sandbox-broker-process";
-                    break;
                 case "forkServer":
                     fluentName = "about-processes-fork-server-process";
                     break;
@@ -478,6 +475,9 @@ let View = {
                     break;
                 case "utility":
                     fluentName = "about-processes-utility-process";
+                    break;
+                case "inference":
+                    fluentName = "about-processes-inference-process";
                     break;
                     // The following are probably not going to show up for users
                     // but let's handle the case anyway to avoid heisenoranges
